@@ -83,7 +83,7 @@ class ProfileScreen extends StatelessWidget {
                               leading: Icon(
                                 kProfileSettignsList[index]['leading']
                                     as IconData,
-                                color: kLightWhite,
+                                color: Theme.of(context).iconTheme.color,
                               ),
                               onTap: () {},
                             );

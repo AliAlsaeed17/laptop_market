@@ -28,7 +28,7 @@ ThemeData lightTheme = ThemeData(
   bottomAppBarColor: kCardBackgroundColor,
   brightness: Brightness.light,
   cardColor: kBackgroundColor,
-  iconTheme: const IconThemeData(color: kPrimaryColor),
+  //iconTheme: const IconThemeData(color: kPrimaryColor),
   fontFamily: 'Roboto',
   backgroundColor: kWhiteColor,
   inputDecorationTheme: const InputDecorationTheme(
@@ -38,6 +38,7 @@ ThemeData lightTheme = ThemeData(
     headlineMedium: kSubHeaderTextStyle,
     bodyMedium: kNormalTextStyle,
   ),
+
   // primaryColor: Colors.blue,
   // buttonTheme: ButtonThemeData(
   //   buttonColor: Colors.blue,

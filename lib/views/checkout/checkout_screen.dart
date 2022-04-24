@@ -97,7 +97,7 @@ class CheckOutScreen extends StatelessWidget {
                                 //   ]),
                                 // )
                                 Text(
-                                  '871 street(between jones &\n Levans st) ',
+                                  '871 kengan street(between jones Levanscwoth st) San Francisco',
                                   style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                               ],
@@ -125,7 +125,7 @@ class CheckOutScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 10.0),
                         Container(
-                          height: 276,
+                          height: 326,
                           child: ListView.separated(
                             itemBuilder: (context, index) => OrderProductCard(),
                             separatorBuilder: (context, index) =>
