@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: darkTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
-      home: ProductScreen(),
+      home: CheckOutScreen(),
       routes: {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
