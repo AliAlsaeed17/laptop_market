@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:laptop_market/constants.dart';
 import 'package:laptop_market/views/home_screen.dart';
@@ -35,10 +36,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Laptop Market',
       debugShowCheckedModeBanner: false,
-      theme: lightTheme,
+      theme: darkTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
-      home: WelcomeScreen(),
+      home: ProductScreen(),
       routes: {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),

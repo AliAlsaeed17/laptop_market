@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:laptop_market/views/widgets/buttons/custom_icon_button.dart';
 import '../../../constants.dart';
 
@@ -13,7 +12,8 @@ class ProductCard extends StatelessWidget {
       width: width,
       height: width + (width * .6),
       decoration: BoxDecoration(
-        color: kCardBackgroundColor,
+        //TODO : need to config light/dark theme
+        color: Colors.blueGrey[900], //kCardBackgroundColor in light
         borderRadius: BorderRadius.circular(kCardBorderRadius),
       ),
       child: Column(
@@ -35,7 +35,9 @@ class ProductCard extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(kCardBorderRadius),
-                color: Colors.white,
+                //TODO : need to config light/dark theme
+                //color: kWhiteColor, in light theme
+                color: Colors.blueGrey[600],
               ),
               child: Column(
                 children: [
@@ -47,7 +49,8 @@ class ProductCard extends StatelessWidget {
                       title: const Text('ProArt StudioBook'),
                       subtitle: Text(
                         'Asus',
-                        style: TextStyle(color: kBlackWithOpacity),
+                        //TODO : need to config light/dark theme
+                        //style: TextStyle(color: kBlackWithOpacity), in light theme
                       ),
                     ),
                   ),
@@ -59,7 +62,8 @@ class ProductCard extends StatelessWidget {
                         const Text(
                           '200 \$',
                           style: TextStyle(
-                            color: Colors.black,
+                            //TODO : need to config light/dark theme
+                            //color: Colors.black, in light theme
                             fontWeight: FontWeight.bold,
                           ),
                         ),

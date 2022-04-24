@@ -34,9 +34,7 @@ class CustomRatingBar extends StatelessWidget {
           onPressed: () {},
           child: Text(
             '$reviewsCount reviews >',
-            style: TextStyle(
-              color: Colors.black.withOpacity(0.3),
-            ),
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         )
       ],

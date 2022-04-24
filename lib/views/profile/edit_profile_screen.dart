@@ -11,7 +11,7 @@ class EditProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      //backgroundColor: kBackgroundColor,
       body: SafeArea(
           child: Container(
         padding: kPageContentPadding,
@@ -22,7 +22,8 @@ class EditProfileScreen extends StatelessWidget {
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  decoration: kContenetCardDecoration,
+                  decoration: kContenetCardDecoration.copyWith(
+                      color: Theme.of(context).backgroundColor),
                   child: Padding(
                     padding: kContentCardPadding,
                     child: Column(

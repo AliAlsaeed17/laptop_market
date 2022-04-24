@@ -8,8 +8,10 @@ const kCardBackgroundColor = Color(0xffEEEFF3);
 const kIconBackgroundColor = Color(0xffE3E4E8);
 const kButtonBackgroundColor = Color(0xff333542);
 const kButtonTextColor = Colors.white;
+const kLightWhite = Colors.white60;
 const kGoldColor = Color.fromRGBO(253, 216, 53, 1);
 const kWhiteColor = Colors.white;
+const kWhiteWithOpacity = Colors.white60;
 const kBlackColor = Colors.black;
 const kDeleteColor = Color.fromARGB(209, 244, 67, 54);
 const kBlackWithOpacity = Colors.black38;
@@ -21,21 +23,24 @@ const kHeaderTextStyle = TextStyle(
   color: kPrimaryColor,
 );
 const kSubHeaderTextStyle = TextStyle(
-  fontSize: 18.0,
+  fontSize: 17.0,
   fontWeight: FontWeight.w500,
   color: kPrimaryColor,
 );
-const kNormalTextStyle = TextStyle(fontSize: 15.0, color: Colors.black);
+const kNormalTextStyle = TextStyle(
+  fontSize: 15.0,
+);
 const kHyperLinkTextStyle = TextStyle(
   fontSize: 15.0,
   color: Colors.blue,
 );
+
 const kButtonTextStyle = TextStyle(color: kButtonTextColor, fontSize: 16);
 const kWelcomeButtonTextStyle = TextStyle(color: kPrimaryColor, fontSize: 20);
 
 //Paddings
 const kPageContentPadding = EdgeInsets.all(25);
-const kContentCardPadding = EdgeInsets.symmetric(horizontal: 15, vertical: 25);
+const kContentCardPadding = EdgeInsets.symmetric(horizontal: 15, vertical: 20);
 const kBottomNavigationBarPadding = EdgeInsets.symmetric(horizontal: 15.0);
 const kListTilePadding = EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0);
 const kListTileContainerPadding = EdgeInsets.only(top: 10);

@@ -6,6 +6,7 @@ class CustomTextFormFiled extends StatelessWidget {
       {Key? key,
       required this.hintText,
       required this.prefixIcon,
+      this.isPassword = false,
       this.keyboardType = TextInputType.text,
       this.obscureText = false,
       required this.onSaved})
@@ -13,6 +14,7 @@ class CustomTextFormFiled extends StatelessWidget {
 
   final String hintText;
   final Icon prefixIcon;
+  final bool isPassword;
   final TextInputType keyboardType;
   final bool obscureText;
   final void Function(String?) onSaved;
@@ -23,12 +25,11 @@ class CustomTextFormFiled extends StatelessWidget {
       obscureText: obscureText,
       keyboardType: keyboardType,
       decoration: InputDecoration(
-        filled: true,
-        fillColor: kBackgroundColor,
-        hintText: hintText,
-        border: kTextFormFieldBorder,
-        prefixIcon: prefixIcon,
-      ),
+          filled: true,
+          hintText: hintText,
+          border: kTextFormFieldBorder,
+          prefixIcon: prefixIcon,
+          suffixIcon: isPassword ? Icon(Icons.visibility_off) : Icon(null)),
       onSaved: onSaved,
     );
   }

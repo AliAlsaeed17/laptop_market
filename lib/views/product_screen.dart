@@ -30,7 +30,7 @@ class ProductScreen extends StatelessWidget {
                 text: '\$500',
                 radius: 10.0,
                 onPressed: () {},
-                backgroundColor: kButtonBackgroundColor,
+                backgroundColor: kPrimaryColor,
               ),
             )
           ],
@@ -38,7 +38,7 @@ class ProductScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Container(
-          color: kCardBackgroundColor,
+          //color: kCardBackgroundColor,
           child: Column(
             children: [
               const Padding(
@@ -76,6 +76,7 @@ class ProductScreen extends StatelessWidget {
                       Container(
                         padding: kPageContentPadding,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
                               'Lenovo yoga 920 13/core i7/16GGB/SSD 1TB',
@@ -91,15 +92,25 @@ class ProductScreen extends StatelessWidget {
                               ),
                               onRatingUpdate: (rating) {},
                             ),
-                            const SizedBox(height: 14.0),
+                            const SizedBox(height: 10.0),
+                            Divider(
+                              color:
+                                  Theme.of(context).textTheme.bodyMedium!.color,
+                            ),
+                            const SizedBox(height: 10.0),
                             const Text(
                               'Description',
                               style: kSubHeaderTextStyle,
                             ),
                             const SizedBox(height: 10.0),
-                            Text(
+                            const Text(
                               '8th Gen Intel Core i7-8550U mobile processor; 8GB system memory; 256GB solid state drive (SSD); Intel UHD Graphics 62013.9" touch screen for hands-on control; 1920 x 1080 native resolution. IPS technology. LED backlight.Windows 10 Home operating system; Built for Windows Ink, Lenovo\'s Active Pen 2 stylus included360° flip-and-fold design; Weighs 3.02 lbs. and measures 0.5" thin; 4-cell lithium-ion battery;',
                               style: kNormalTextStyle,
+                            ),
+                            const SizedBox(height: 10.0),
+                            Divider(
+                              color:
+                                  Theme.of(context).textTheme.bodyMedium!.color,
                             ),
                             const SizedBox(height: 10.0),
                             const Text(
@@ -107,6 +118,25 @@ class ProductScreen extends StatelessWidget {
                               style: kSubHeaderTextStyle,
                             ),
                             const SizedBox(height: 10.0),
+                            Text(
+                              'Processor: Core i7-8550U mobile processor',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              'Memory: 8GB DDR4',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              'Storage: 256GB solid state drive (SSD)',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              'Screen: 1920 x 1080 native resolution LED',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              'Battery: 4400 mAh',
+                            )
                           ],
                         ),
                       ),

@@ -15,8 +15,11 @@ class CustomNavigationBar extends StatelessWidget {
     return Container(
       padding: kBottomNavigationBarPadding,
       height: height,
-      decoration: const BoxDecoration(
-        color: kCardBackgroundColor,
+      decoration: BoxDecoration(
+        //Done
+        //TODO : need to config light/dark theme
+        // color: kCardBackgroundColor, in light mode
+        color: Theme.of(context).bottomAppBarColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),

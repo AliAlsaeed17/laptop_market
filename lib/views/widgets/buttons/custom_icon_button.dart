@@ -7,7 +7,7 @@ class CustomIconButton extends StatelessWidget {
     required this.icon,
     this.width = 35,
     this.height = 35,
-    this.iconColor = Colors.black,
+    this.iconColor = kBlackColor,
     this.backgroundColor = kIconBackgroundColor,
     this.iconSize = 18,
     this.borderRadius = 10,

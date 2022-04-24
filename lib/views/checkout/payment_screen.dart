@@ -13,7 +13,7 @@ class PaymentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      //backgroundColor: kBackgroundColor,
       bottomNavigationBar: CustomNavigationBar(
         widgets: Padding(
           padding: kBottomNavigationBarPadding.copyWith(top: 25, bottom: 15),
@@ -36,7 +36,8 @@ class PaymentScreen extends StatelessWidget {
                 height: 20.0,
               ),
               Container(
-                decoration: kContenetCardDecoration,
+                decoration: kContenetCardDecoration.copyWith(
+                    color: Theme.of(context).backgroundColor),
                 padding: kContentCardPadding,
                 width: MediaQuery.of(context).size.width,
                 child: Column(

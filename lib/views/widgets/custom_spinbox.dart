@@ -24,7 +24,7 @@ class CustomSpinBox extends StatelessWidget {
           child: Center(
             child: Text(
               '$quantity',
-              style: kSubHeaderTextStyle,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ),
         ),

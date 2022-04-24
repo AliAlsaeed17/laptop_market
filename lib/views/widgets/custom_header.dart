@@ -17,13 +17,16 @@ class CustomHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     return Container(
-      padding: EdgeInsets.symmetric(vertical: height * .02),
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.only(top: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomIconButton(
+            //TODO: dark light theme colors
+            backgroundColor: Theme.of(context).backgroundColor,
+            iconColor: Theme.of(context).iconTheme.color!,
             onPressed: () {
               Get.back();
             },

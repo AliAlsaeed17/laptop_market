@@ -6,10 +6,11 @@ class OrderProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final subHeaderTextStyle = Theme.of(context).textTheme.headlineMedium;
     return Container(
       padding: kContentCardPadding,
       decoration: BoxDecoration(
-        color: kBackgroundColor,
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(kCardBorderRadius),
       ),
       child: Row(
@@ -35,26 +36,26 @@ class OrderProductCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'legion 920',
-                      style: kSubHeaderTextStyle,
+                    //TODO: text colors
+                    Text(
+                      'ideapad 920 mx 720/16GB ssd 1TB',
+                      style: subHeaderTextStyle,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
                       'Lenovo',
-                      style:
-                          kNormalTextStyle.copyWith(color: kBlackWithOpacity),
+                      style: subHeaderTextStyle!.copyWith(fontSize: 16.0),
                     ),
                     const SizedBox(height: 15.0),
                     Text(
                       '\$980',
-                      style: kSubHeaderTextStyle.copyWith(color: kGoldColor),
+                      style: subHeaderTextStyle.copyWith(color: kGoldColor),
                     ),
                   ],
                 ),
-                const Text(
+                Text(
                   'x1',
-                  style: kSubHeaderTextStyle,
+                  style: kSubHeaderTextStyle.copyWith(color: kWhiteColor),
                 ),
               ],
             ),

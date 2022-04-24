@@ -10,13 +10,17 @@ class ShoppingProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final subHeaderTextStyle = Theme.of(context).textTheme.headlineMedium;
     return Container(
       decoration: BoxDecoration(
-        color: kWhiteColor,
+        //TODO : need to config light/dark theme
+        //color: kWhiteColor, in light mode
+        //color: Colors.blueGrey[900],
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(kCardBorderRadius),
       ),
       child: Padding(
-        padding: kContentCardPadding,
+        padding: kContentCardPadding.copyWith(left: 10, right: 10),
         child: Row(
           children: [
             Expanded(
@@ -25,6 +29,9 @@ class ShoppingProductCard extends StatelessWidget {
                 width: 90.0,
                 height: 90.0,
                 decoration: BoxDecoration(
+                  //TODO : need to config light/dark theme
+                  //color: kIconBackgroundColor, in light mode
+                  //color: Colors.blueGrey[600],
                   color: kIconBackgroundColor,
                   borderRadius: BorderRadius.circular(kCardBorderRadius),
                 ),
@@ -38,7 +45,7 @@ class ShoppingProductCard extends StatelessWidget {
                 children: [
                   Text(
                     'lenovo ideapad 920 mx 720/16GB ssd 1TB',
-                    style: kSubHeaderTextStyle,
+                    style: subHeaderTextStyle,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
@@ -47,7 +54,7 @@ class ShoppingProductCard extends StatelessWidget {
                         Text(
                           '950\$',
                           style:
-                              kSubHeaderTextStyle.copyWith(color: kGoldColor),
+                              subHeaderTextStyle!.copyWith(color: kGoldColor),
                         ),
                         const SizedBox(width: 7.0),
                         const Text('|'),
@@ -56,8 +63,10 @@ class ShoppingProductCard extends StatelessWidget {
                         const SizedBox(width: 5.0),
                         Text(
                           'Black',
-                          style: kSubHeaderTextStyle.copyWith(
-                              color: kBlackWithOpacity),
+                          //TODO : need to config light/dark theme
+                          // color: kBlackWithOpacity , in light mode
+                          style:
+                              subHeaderTextStyle.copyWith(color: kBlackColor),
                         ),
                       ],
                     ),
