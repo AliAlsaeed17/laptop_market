@@ -1,7 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:laptop_market/constants.dart';
+import 'package:laptop_market/views/home_screen.dart';
 import 'package:laptop_market/views/widgets/custom_checkbox.dart';
 import 'package:laptop_market/views/widgets/custom_header.dart';
 import 'package:laptop_market/views/widgets/custom_text_form_field.dart';
@@ -17,15 +19,16 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            padding: kPageContentPadding,
-            child: Column(
-              children: [
-                const CustomHeader(title: "Sign In"),
-                Container(
-                  decoration: kContenetCardDecoration,
-                  child: Padding(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          padding: kPageContentPadding,
+          child: Column(
+            children: [
+              const CustomHeader(title: "Sign In"),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Container(
+                    decoration: kContenetCardDecoration,
                     padding: kContentCardPadding,
                     child: Column(
                       children: [
@@ -104,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                             text: "Sign In",
                             backgroundColor: kPrimaryColor,
                             width: MediaQuery.of(context).size.width,
-                            onPressed: () {},
+                            onPressed: () => Get.to(HomeScreen()),
                           ),
                         ),
                         Padding(
@@ -139,35 +142,35 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                        )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              style: const TextStyle(color: Colors.black),
+                              children: [
+                                const TextSpan(
+                                  text: 'Don\'t have an account? ',
+                                ),
+                                TextSpan(
+                                  text: 'Sign Up',
+                                  style: const TextStyle(color: Colors.blue),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      Navigator.pushNamed(context, '/signup');
+                                    },
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      style: const TextStyle(color: Colors.black),
-                      children: [
-                        const TextSpan(
-                          text: 'Don\'t have an account? ',
-                        ),
-                        TextSpan(
-                          text: 'Sign Up',
-                          style: const TextStyle(color: Colors.blue),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.pushNamed(context, '/signup');
-                            },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
