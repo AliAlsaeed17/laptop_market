@@ -34,7 +34,7 @@ const kButtonTextStyle = TextStyle(color: kButtonTextColor, fontSize: 16);
 const kWelcomeButtonTextStyle = TextStyle(color: kPrimaryColor, fontSize: 20);
 
 //Paddings
-const kPageContentPadding = EdgeInsets.all(25);
+const kPageContentPadding = EdgeInsets.only(top: 25, right: 25, left: 25);
 const kContentCardPadding = EdgeInsets.symmetric(horizontal: 15, vertical: 25);
 const kBottomNavigationBarPadding = EdgeInsets.symmetric(horizontal: 15.0);
 const kListTilePadding = EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0);
