@@ -17,7 +17,7 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         width: width,
         height: height,
-        padding: EdgeInsets.all(width * .1),
+        padding: EdgeInsets.all(width * .028),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -49,13 +49,13 @@ class WelcomeScreen extends StatelessWidget {
                         text: 'Sign In',
                         textStyle: kWelcomeButtonTextStyle,
                         width: cons.maxWidth,
-                        onPressed: () => Get.to(SignUpScreen()),
+                        onPressed: () => Get.to(LoginScreen()),
                       ),
                       RoundedButton(
                         text: 'Sign Up',
                         textStyle: kWelcomeButtonTextStyle,
                         width: cons.maxWidth,
-                        onPressed: () => Get.to(LoginScreen()),
+                        onPressed: () => Get.to(SignUpScreen()),
                       ),
                     ],
                   ),
