@@ -19,18 +19,6 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       //backgroundColor: kBackgroundColor,
       body: SafeArea(
-<<<<<<< HEAD
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          padding: kPageContentPadding,
-          child: Column(
-            children: [
-              const CustomHeader(title: "Sign In"),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Container(
-                    decoration: kContenetCardDecoration,
-=======
         child: SingleChildScrollView(
           child: Container(
             padding: kPageContentPadding,
@@ -42,7 +30,6 @@ class LoginScreen extends StatelessWidget {
                   decoration: kContenetCardDecoration.copyWith(
                       color: Theme.of(context).backgroundColor),
                   child: Padding(
->>>>>>> 356957936cd7d035e0f8c5acda52f01553bb035c
                     padding: kContentCardPadding,
                     child: Column(
                       children: [
@@ -140,84 +127,6 @@ class LoginScreen extends StatelessWidget {
                                 backgroundColor: kDeleteColor,
                                 onPressed: () {},
                               ),
-<<<<<<< HEAD
-                              InkWell(
-                                onTap: () => {},
-                                child: const Text(
-                                  'Forgot Password?',
-                                  style: kHyperLinkTextStyle,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 15),
-                          child: RoundedButton(
-                            text: "Sign In",
-                            backgroundColor: kPrimaryColor,
-                            width: MediaQuery.of(context).size.width,
-                            onPressed: () => Get.to(HomeScreen()),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 5),
-                          child: const Text(
-                            'Or',
-                            style: kNormalTextStyle,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                child: RoundedIconButton(
-                                  icon: const Icon(FontAwesomeIcons.facebook),
-                                  text: "Facebook",
-                                  textColor: kButtonTextColor,
-                                  backgroundColor: kPrimaryColor,
-                                  onPressed: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child: RoundedIconButton(
-                                  icon: const Icon(FontAwesomeIcons.google),
-                                  text: "Google",
-                                  textColor: kButtonTextColor,
-                                  backgroundColor: kDeleteColor,
-                                  onPressed: () {},
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: RichText(
-                            textAlign: TextAlign.center,
-                            text: TextSpan(
-                              style: const TextStyle(color: Colors.black),
-                              children: [
-                                const TextSpan(
-                                  text: 'Don\'t have an account? ',
-                                ),
-                                TextSpan(
-                                  text: 'Sign Up',
-                                  style: const TextStyle(color: Colors.blue),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Navigator.pushNamed(context, '/signup');
-                                    },
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-=======
                             ),
                           ],
                         )
@@ -245,11 +154,10 @@ class LoginScreen extends StatelessWidget {
                           },
                       ),
                     ],
->>>>>>> 356957936cd7d035e0f8c5acda52f01553bb035c
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

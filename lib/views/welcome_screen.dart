@@ -46,23 +46,15 @@ class WelcomeScreen extends StatelessWidget {
                         text: 'Sign In',
                         textStyle: kWelcomeButtonTextStyle,
                         width: cons.maxWidth,
-<<<<<<< HEAD
-                        onPressed: () => Get.to(LoginScreen()),
-=======
                         onPressed: () =>
                             {Navigator.pushNamed(context, '/login')},
->>>>>>> 356957936cd7d035e0f8c5acda52f01553bb035c
                       ),
                       RoundedButton(
                         text: 'Sign Up',
                         textStyle: kWelcomeButtonTextStyle,
                         width: cons.maxWidth,
-<<<<<<< HEAD
-                        onPressed: () => Get.to(SignUpScreen()),
-=======
                         onPressed: () =>
                             {Navigator.pushNamed(context, '/signup')},
->>>>>>> 356957936cd7d035e0f8c5acda52f01553bb035c
                       ),
                     ],
                   ),
