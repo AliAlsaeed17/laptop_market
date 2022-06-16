@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      //backgroundColor: kBackgroundColor,
       body: SafeArea(
         child: Container(
           width: MediaQuery.of(context).size.width,
@@ -59,11 +59,12 @@ class HomeScreen extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () => Get.toNamed('/popular'),
-                            child: Text(
+                            child: const Text(
                               'See All',
                               style: TextStyle(
-                                color: Colors.black.withOpacity(0.4),
-                              ),
+                                  //TODO : need to config light/dark theme
+                                  //color: kBlackWithOpacity, in light theme
+                                  ),
                             ),
                           ),
                         ],

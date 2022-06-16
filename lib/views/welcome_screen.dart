@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:laptop_market/constants.dart';
-import 'package:laptop_market/views/authentication/signup_screen.dart';
-import 'authentication/login_screen.dart';
 import 'widgets/buttons/rounded_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -49,13 +46,23 @@ class WelcomeScreen extends StatelessWidget {
                         text: 'Sign In',
                         textStyle: kWelcomeButtonTextStyle,
                         width: cons.maxWidth,
+<<<<<<< HEAD
                         onPressed: () => Get.to(LoginScreen()),
+=======
+                        onPressed: () =>
+                            {Navigator.pushNamed(context, '/login')},
+>>>>>>> 356957936cd7d035e0f8c5acda52f01553bb035c
                       ),
                       RoundedButton(
                         text: 'Sign Up',
                         textStyle: kWelcomeButtonTextStyle,
                         width: cons.maxWidth,
+<<<<<<< HEAD
                         onPressed: () => Get.to(SignUpScreen()),
+=======
+                        onPressed: () =>
+                            {Navigator.pushNamed(context, '/signup')},
+>>>>>>> 356957936cd7d035e0f8c5acda52f01553bb035c
                       ),
                     ],
                   ),

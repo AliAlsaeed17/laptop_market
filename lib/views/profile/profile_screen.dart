@@ -12,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: kBackgroundColor,
+      //backgroundColor: kBackgroundColor,
       body: SafeArea(
         child: Container(
           padding: kPageContentPadding,
@@ -26,7 +26,10 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        decoration: kContenetCardDecoration,
+                        //TODO : need to config light/dark theme
+                        //backgroundColor: kContenetCardDecoration, in light mode
+                        decoration: kContenetCardDecoration.copyWith(
+                            color: Theme.of(context).backgroundColor),
                         child: Padding(
                           padding: kContentCardPadding,
                           child: Column(
@@ -34,8 +37,10 @@ class ProfileScreen extends StatelessWidget {
                               Container(
                                 width: 100.0,
                                 height: 100.0,
-                                decoration: const BoxDecoration(
-                                  color: kIconBackgroundColor,
+                                decoration: BoxDecoration(
+                                  //TODO : need to config light/dark theme
+                                  //color: kIconBackgroundColor,in light mode
+                                  color: Colors.blueGrey[600],
                                   image: DecorationImage(
                                     image: AssetImage('assets/images/logo.png'),
                                     fit: BoxFit.cover,
@@ -65,7 +70,10 @@ class ProfileScreen extends StatelessWidget {
                       Container(
                         height: 240,
                         padding: kListTileContainerPadding,
-                        decoration: kContenetCardDecoration,
+                        //TODO : need to config light/dark theme
+                        //backgroundColor: kContenetCardDecoration, in light mode
+                        decoration: kContenetCardDecoration.copyWith(
+                            color: Theme.of(context).backgroundColor),
                         child: ListView.separated(
                           itemBuilder: (context, index) {
                             return CustomListTile(
@@ -75,7 +83,7 @@ class ProfileScreen extends StatelessWidget {
                               leading: Icon(
                                 kProfileSettignsList[index]['leading']
                                     as IconData,
-                                color: kPrimaryColor,
+                                color: Theme.of(context).iconTheme.color,
                               ),
                               onTap: () {},
                             );
@@ -95,12 +103,15 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: RoundedIconButton(
-        radius: 5,
-        icon: const Icon(
+        radius: 10,
+        icon: Icon(
           Icons.logout,
         ),
         text: 'Logout',
-        backgroundColor: kIconBackgroundColor,
+        //TODO : need to config light/dark theme
+        //backgroundColor: kIconBackgroundColor & delete textColor, in light mode
+        backgroundColor: Theme.of(context).backgroundColor,
+        //textColor: kWhiteColor,
         onPressed: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,

@@ -10,6 +10,7 @@ class ShoppingCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final subHeaderTextStyle = Theme.of(context).textTheme.headlineMedium;
     return Scaffold(
       bottomNavigationBar: CustomNavigationBar(
         height: 166,
@@ -19,22 +20,22 @@ class ShoppingCart extends StatelessWidget {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text('Product Quantity', style: kSubHeaderTextStyle),
-                  Text('5', style: kSubHeaderTextStyle),
+                children: [
+                  Text('Product Quantity', style: subHeaderTextStyle),
+                  Text('5', style: subHeaderTextStyle),
                 ],
               ),
               const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     'Total Price',
-                    style: kSubHeaderTextStyle,
+                    style: subHeaderTextStyle,
                   ),
                   Text(
                     '\$2.560',
-                    style: kSubHeaderTextStyle.copyWith(color: kGoldColor),
+                    style: subHeaderTextStyle!.copyWith(color: kGoldColor),
                   ),
                 ],
               ),
@@ -44,13 +45,15 @@ class ShoppingCart extends StatelessWidget {
                 radius: 10.0,
                 width: MediaQuery.of(context).size.width,
                 backgroundColor: kPrimaryColor,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/checkout');
+                },
               )
             ],
           ),
         ),
       ),
-      backgroundColor: kBackgroundColor,
+      //backgroundColor: kBackgroundColor,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Padding(
@@ -60,12 +63,18 @@ class ShoppingCart extends StatelessWidget {
               const CustomHeader(title: 'Card'),
               const SizedBox(height: 20.0),
               Container(
-                height: 406,
-                child: ListView.separated(
-                  itemBuilder: (context, index) => const ShoppingProductCard(),
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(height: 12),
-                  itemCount: 4,
+                padding: kContentCardPadding.copyWith(left: 10, right: 10),
+                decoration: kContenetCardDecoration.copyWith(
+                    color: Theme.of(context).backgroundColor),
+                child: Container(
+                  height: 406,
+                  child: ListView.separated(
+                    itemBuilder: (context, index) =>
+                        const ShoppingProductCard(),
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 12),
+                    itemCount: 4,
+                  ),
                 ),
               ),
             ],

@@ -14,7 +14,7 @@ class CheckOutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      //backgroundColor: kBackgroundColor,
       bottomNavigationBar: CustomNavigationBar(
         widgets: Padding(
           padding: kBottomNavigationBarPadding.copyWith(top: 25, bottom: 15),
@@ -37,7 +37,8 @@ class CheckOutScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Expanded(
                 child: Container(
-                  decoration: kContenetCardDecoration,
+                  decoration: kContenetCardDecoration.copyWith(
+                      color: Theme.of(context).backgroundColor),
                   padding:
                       EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                   child: SingleChildScrollView(
@@ -77,14 +78,13 @@ class CheckOutScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   'Jelly Grande',
-                                  style: kNormalTextStyle.copyWith(
-                                      color: kBlackWithOpacity),
+                                  //TODO : need to config light/dark theme
+                                  style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                                 const SizedBox(height: 7.0),
                                 Text(
                                   '+62 123 456 78',
-                                  style: kNormalTextStyle.copyWith(
-                                      color: kBlackWithOpacity),
+                                  style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                                 const SizedBox(height: 7.0),
                                 // RichText(
@@ -97,9 +97,8 @@ class CheckOutScreen extends StatelessWidget {
                                 //   ]),
                                 // )
                                 Text(
-                                  '871 kengan street(between jones &\n Levanscwoth st) San Francisco ',
-                                  style: kNormalTextStyle.copyWith(
-                                      color: kBlackWithOpacity),
+                                  '871 kengan street(between jones Levanscwoth st) San Francisco',
+                                  style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                               ],
                             )
@@ -126,7 +125,7 @@ class CheckOutScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 10.0),
                         Container(
-                          height: 276,
+                          height: 326,
                           child: ListView.separated(
                             itemBuilder: (context, index) => OrderProductCard(),
                             separatorBuilder: (context, index) =>
