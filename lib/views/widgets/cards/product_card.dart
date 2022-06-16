@@ -8,10 +8,9 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width / 2;
+    double width = MediaQuery.of(context).size.width / 2.5;
     return Container(
       width: width,
-      height: width + (width * .6),
       decoration: BoxDecoration(
         color: kCardBackgroundColor,
         borderRadius: BorderRadius.circular(kCardBorderRadius),
@@ -24,8 +23,7 @@ class ProductCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(kCardBorderRadius),
               child: Image.asset(
                 'assets/images/logo.png',
-                width: double.infinity,
-                height: width * .64,
+                width: width,
                 fit: BoxFit.cover,
               ),
             ),
@@ -40,11 +38,10 @@ class ProductCard extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    child: ListTile(
-                      visualDensity: const VisualDensity(vertical: -4),
-                      contentPadding:
-                          const EdgeInsets.symmetric(horizontal: 12.0),
-                      title: const Text('ProArt StudioBook'),
+                    child: const ListTile(
+                      visualDensity: VisualDensity(vertical: -4),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 12.0),
+                      title: Text('ProArt StudioBook'),
                       subtitle: Text(
                         'Asus',
                         style: TextStyle(color: kBlackWithOpacity),

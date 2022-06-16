@@ -15,36 +15,41 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SafeArea(
-        child: Padding(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
           padding: kPageContentPadding,
           child: Column(
             children: [
-              CustomHeader(
-                title: "Home",
-                trailingExist: true,
-                trailingIcon: CustomIconButton(
-                  icon: FontAwesomeIcons.search,
-                  onPressed: () {},
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15),
+                child: CustomHeader(
+                  title: "Home",
+                  trailingExist: true,
+                  trailingIcon: CustomIconButton(
+                    icon: FontAwesomeIcons.search,
+                    onPressed: () {},
+                  ),
                 ),
               ),
-              const SizedBox(height: 35.0),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      CustomSlider(
-                        widgets: [
-                          Image.asset(
-                            'assets/images/2.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                          Image.asset(
-                            'assets/images/3.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 15),
+                        child: CustomSlider(
+                          widgets: [
+                            Image.asset(
+                              'assets/images/2.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                            Image.asset(
+                              'assets/images/3.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ],
+                        ),
                       ),
-                      const SizedBox(height: 15.0),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -64,7 +69,8 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       Container(
-                        height: 280,
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * .7,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
                           itemCount: 6,
