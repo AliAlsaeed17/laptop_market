@@ -12,8 +12,7 @@ class ProductCard extends StatelessWidget {
       width: width,
       height: width + (width * .6),
       decoration: BoxDecoration(
-        //TODO : need to config light/dark theme
-        color: Colors.blueGrey[900], //kCardBackgroundColor in light
+        color: Theme.of(context).backgroundColor,
         borderRadius: BorderRadius.circular(kCardBorderRadius),
       ),
       child: Column(
@@ -37,7 +36,7 @@ class ProductCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(kCardBorderRadius),
                 //TODO : need to config light/dark theme
                 //color: kWhiteColor, in light theme
-                color: Colors.blueGrey[600],
+                color: Theme.of(context).cardColor,
               ),
               child: Column(
                 children: [
@@ -69,6 +68,8 @@ class ProductCard extends StatelessWidget {
                         ),
                         CustomIconButton(
                           icon: Icons.arrow_forward_ios,
+                          backgroundColor: Theme.of(context).bottomAppBarColor,
+                          iconColor: Theme.of(context).iconTheme.color!,
                           onPressed: () {},
                         ),
                       ],

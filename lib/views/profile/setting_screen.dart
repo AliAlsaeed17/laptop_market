@@ -53,6 +53,8 @@ class SettingScreen extends StatelessWidget {
                         ),
                         CustomListTile(
                           title: 'Notifications',
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Theme.of(context).iconTheme.color),
                           onTap: () {},
                         ),
                         const Padding(
@@ -63,6 +65,8 @@ class SettingScreen extends StatelessWidget {
                         ),
                         CustomListTile(
                           title: 'About',
+                          trailing: Icon(Icons.arrow_forward_ios,
+                              color: Theme.of(context).iconTheme.color),
                           onTap: () {},
                         ),
                         const SizedBox(

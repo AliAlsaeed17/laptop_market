@@ -85,6 +85,8 @@ class ProfileScreen extends StatelessWidget {
                                     as IconData,
                                 color: Theme.of(context).iconTheme.color,
                               ),
+                              trailing: Icon(Icons.arrow_forward_ios,
+                                  color: Theme.of(context).iconTheme.color),
                               onTap: () {},
                             );
                           },

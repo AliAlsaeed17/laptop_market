@@ -24,6 +24,8 @@ class HomeScreen extends StatelessWidget {
                 trailingExist: true,
                 trailingIcon: CustomIconButton(
                   icon: FontAwesomeIcons.search,
+                  backgroundColor: Theme.of(context).backgroundColor,
+                  iconColor: Theme.of(context).iconTheme.color!,
                   onPressed: () {},
                 ),
               ),
