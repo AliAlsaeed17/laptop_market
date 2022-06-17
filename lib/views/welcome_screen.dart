@@ -14,7 +14,7 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         width: width,
         height: height,
-        padding: EdgeInsets.all(width * .1),
+        padding: EdgeInsets.all(width * .028),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

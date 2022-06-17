@@ -1,7 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:laptop_market/constants.dart';
+import 'package:laptop_market/views/home_screen.dart';
 import 'package:laptop_market/views/widgets/custom_checkbox.dart';
 import 'package:laptop_market/views/widgets/custom_header.dart';
 import 'package:laptop_market/views/widgets/custom_text_form_field.dart';
