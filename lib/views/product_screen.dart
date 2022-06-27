@@ -7,9 +7,20 @@ import 'package:laptop_market/views/widgets/custom_navigation_bar.dart';
 import 'package:laptop_market/views/widgets/custom_rating_bar.dart';
 import 'widgets/custom_spinbox.dart';
 import 'widgets/buttons/rounded_button.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+final _firestoreInstance = FirebaseFirestore.instance;
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({Key? key}) : super(key: key);
+
+  getData() {
+    _firestoreInstance.collection('products').get().then((value) {
+      value.docs.forEach((element) {
+        print(element.data());
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +40,9 @@ class ProductScreen extends StatelessWidget {
               child: RoundedButton(
                 text: '\$500',
                 radius: 10.0,
-                onPressed: () {},
+                onPressed: () {
+                  getData();
+                },
                 backgroundColor: kPrimaryColor,
               ),
             )

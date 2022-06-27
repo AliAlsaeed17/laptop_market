@@ -25,8 +25,8 @@ import 'package:laptop_market/views/shopping_cart.dart';
 import 'package:laptop_market/themes.dart';
 
 void main() async {
-  //WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -36,10 +36,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Laptop Market',
       debugShowCheckedModeBanner: false,
-      theme: darkTheme,
+      theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
-      home: SettingScreen(),
+      home: HomeScreen(),
       routes: {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
